@@ -1,4 +1,4 @@
-const BASE = "http://localhost:8080";
+const BASE = "https://expense-tracker-backend-4aft.onrender.com";
 
 export async function fetchExpenses(category) {
   const url = category
