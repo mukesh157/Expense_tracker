@@ -1,0 +1,18 @@
+# Node
+node_modules/
+
+# Vite
+dist/
+
+# Go
+*.exe
+*.test
+*.out
+
+# Local storage
+backend/expenses.json
+
+# IDE files
+.vscode/
+*.log
+.DS_Store
