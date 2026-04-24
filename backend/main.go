@@ -1,6 +1,10 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"os"
+
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
 	InitDB()
@@ -11,5 +15,10 @@ func main() {
 	r.POST("/expenses", CreateExpense)
 	r.GET("/expenses", GetExpenses)
 
-	r.Run(":8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	r.Run(":" + port)
 }

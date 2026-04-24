@@ -1,0 +1,13 @@
+services:
+  - type: static
+    name: expense-tracker-frontend
+    repoRoot: frontend
+    buildCommand: npm install && npm run build
+    publishPath: dist
+
+  - type: web
+    name: expense-tracker-backend
+    repoRoot: backend
+    env: go
+    buildCommand: go build -o app
+    startCommand: ./app
